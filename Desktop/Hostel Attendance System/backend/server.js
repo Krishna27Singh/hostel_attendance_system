@@ -12,11 +12,11 @@ app.use(bodyParser.json());
 
 const TARGET_LAT = 31.39809;
 const TARGET_LON = 75.53226;
-const RADIUS = 200; // in meters
+const RADIUS = 200; 
 
 function haversine(lat1, lon1, lat2, lon2) {
   const toRad = (angle) => (angle * Math.PI) / 180;
-  const R = 6371000; // Earth's radius in meters
+  const R = 6371000; 
 
   const dLat = toRad(lat2 - lat1);
   const dLon = toRad(lon2 - lon1);
@@ -29,7 +29,7 @@ function haversine(lat1, lon1, lat2, lon2) {
 
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
-  return R * c; // distance in meters
+  return R * c; 
 }
 
 app.post('/api/verify-location', (req, res) => {
