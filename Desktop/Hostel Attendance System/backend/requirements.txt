@@ -1,0 +1,8 @@
+flask
+flask-session
+cv2
+numpy
+base64
+pymongo
+maths
+flask_cors

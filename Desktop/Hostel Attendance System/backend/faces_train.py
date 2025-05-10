@@ -2,10 +2,10 @@ import os
 import cv2 as cv 
 import numpy as np
 
-people = ['krishnas.bt.24@nitj.ac.in', 'rathodr.it.24@nitj.ac.in']
+people = ['krishnas.bt.24@nitj.ac.in', 'rathodr.it.24@nitj.ac.in', 'shashi']
 DIR = 'faces'
 
-haar_cascade = cv.CascadeClassifier('haar_face.xml')
+haar_cascade = cv.CascadeClassifier('haar_face.xml') 
 
 features = []
 labels = []
@@ -18,7 +18,7 @@ def create_train():
         for img in os.listdir(path):
             img_path = os.path.join(path, img)
 
-            img_array = cv.imread(img_path)
+            img_array = cv.imread(img_path)   
             gray = cv.cvtColor(img_array, cv.COLOR_BGR2GRAY)
 
             faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=4)
