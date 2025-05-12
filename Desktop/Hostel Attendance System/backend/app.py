@@ -24,7 +24,7 @@ haar_cascade = cv2.CascadeClassifier('haar_face.xml')
 
 TARGET_LAT = 31.39809
 TARGET_LON = 75.53226
-RADIUS = 300
+RADIUS = 500000
 
 def haversine(lat1, lon1, lat2, lon2):
     to_rad = lambda x: x * math.pi / 180
